@@ -1,0 +1,10 @@
+<view>
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button> 
+  <view class="namebox">
+    <view class="label">昵称</view>
+    <input value="{{nickname}}" bindchange="handleChange" type="nickname" class="weui-input" placeholder="请输入昵称"/>
+  </view>
+  <button bind:tap="submit">提交修改</button>
+</view>

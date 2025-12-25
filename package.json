@@ -1,0 +1,26 @@
+{
+  "name": "wechat-app-mall",
+  "version": "8.4.0",
+  "description": "删除 <float-menu />",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.10.4",
+    "apifm-wxapi": "^3.55.0",
+    "big.js": "^6.2.1",
+    "flyio": "^0.6.14",
+    "lodash": "^4.17.21",
+    "mp-html": "^2.3.1",
+    "wxa-plugin-canvas": "^1.1.12",
+    "wxbarcode": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "微店",
+    "小店",
+    "微商城"
+  ],
+  "author": "gooking",
+  "license": "ISC"
+}
