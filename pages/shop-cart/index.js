@@ -5,13 +5,14 @@ import { goodsInfo, modifyNumber, goodSelect, delGoods } from '../../apis/produc
 Page({
   data: {
     delBtnWidth: 120, //删除按钮宽度单位（rpx）
+    shippingCarInfo:{}
   },
 
   //获取元素自适应后的实际宽度
   getEleWidth: function (w) {
     var real = 0;
     try {
-      var res = wx.getSystemInfoSync().windowWidth
+      var res = wx.getSystemSetting().windowWidth
       console.log(res, 'res')
       // 窗口是给的px单位，需要换算成rpx
       var scale = (750 / 2) / (w / 2)
@@ -43,10 +44,10 @@ Page({
   async shippingCarInfo() {
     const res = await goodsInfo()
     let totalPrice = 0
+    console.log('goodsInfo返回结果：', res) // 新增这行，查看实际返回内容
     // 计算总价
     res.items.forEach(ele => {
       if (ele.selected) {
-        console.log(Bigjs(ele.number).times(ele.price).toNumber(), '2222')
         totalPrice = Bigjs(totalPrice).plus(Bigjs(ele.number).times(ele.price)).toNumber()
       }
     })
